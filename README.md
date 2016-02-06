@@ -79,6 +79,13 @@ $ in2csv nsnextract.xlsx > data.csv
 
 Now we have some data in a csv format it's time to look at it and figure out what we've got. 
 
+Csvlook will dump the entire csv into your terminal 
+$ csvlook data.csv
+
+Depending on the size of your data set this might not be the most useful or legible format for your dataset. 
+
+We need to refine and figure out the schema of what we're looking at. 
+
 
 
 
