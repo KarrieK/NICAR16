@@ -7,31 +7,36 @@ We are also going to cover curl and xxxx
 #Overview
 We are going to use the following commands:
 
-- pwd
-- cd
-- mkdir
-- curl
-- in2csv
-- csvlook
-- csvcut
-- csvclean
-- csvstat
-- csvsort
-- csvgrep
-- csvsql
+* pwd - print working directory 
+* cd - change directory
+* mkdir - make directory
+* ls - list
+* curl - grabs data from a url
+* in2csv - converts a file into a csv
+* csvlook - gives us a preview of our data
+* csvcut - cutting too for manipulating csvs
+* csvclean - cleans our csv for errors
+* csvstat - gives us descriptive stats for the content of our csv
+* csvsort - sorts the contents of a csv file
+* csvgrep - regex command like a refined search function in our csv
+* csvsql - enables us to connect to a sql database 
 
 #Installation
 Ideally you will be running a virtualenv or virtualbox running a linux based operating system.
 If not, never fear csvkit should operate fine on a Mac OS. 
 You need python 2.7 or 3.3 installed. 
 
-You can install csvkit using the following commands:
+You can install csvkit using the following commands, depending on what package manager you're using:
 
-pip install csvkit
+$ pip install csvkit
 
 or 
 
-sudo apt-get install csvkit
+$ conda install csv
+
+or 
+
+$ sudo apt-get install csvkit
 
 # The set-up
 
@@ -60,7 +65,7 @@ Now we need to find some data and read it into the terminal.
 
 We are going to use the command curl which grabs data from urls
 
-curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84e2/resource/e983b323-df6e-43f2-a78d-7af0a2dff997/download/nsnextract.xlsx
+$ curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84e2/resource/e983b323-df6e-43f2-a78d-7af0a2dff997/download/nsnextract.xlsx
 
 To make sure that we have been succesful grabbing the data type - ls and it should list the file
 
@@ -71,6 +76,10 @@ The first thing we need to do is turn our excel file into a csv and change its n
 To do this we are going to use the command in2csv and then rename it
 
 $ in2csv nsnextract.xlsx > data.csv
+
+Now we have some data in a csv format it's time to look at it and figure out what we've got. 
+
+
 
 
 
