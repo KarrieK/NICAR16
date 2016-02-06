@@ -80,11 +80,20 @@ $ in2csv nsnextract.xlsx > data.csv
 Now we have some data in a csv format it's time to look at it and figure out what we've got. 
 
 Csvlook will dump the entire csv into your terminal 
+
 $ csvlook data.csv
 
-Depending on the size of your data set this might not be the most useful or legible format for your dataset. 
+Your data is probably going to look like a mess. The rows and columns can't all fit in  the width of your terminal and so it's going to be pretty dificult to make any sense of what you've got. 
 
 We need to refine and figure out the schema of what we're looking at. 
+
+$ csvcut -n data. csv 
+
+The -n means that we should see the names of the columns 
+
+Now we have 6 columns - this is a good time to get our data dictionary out and figute out what type of data we're looking at. 
+
+
 
 
 
