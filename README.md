@@ -7,6 +7,9 @@ We are also going to cover curl and xxxx
 #Overview
 We are going to use the following commands:
 
+- pwd
+- cd
+- mkdir
 - curl
 - in2csv
 - csvlook
@@ -30,7 +33,7 @@ or
 
 sudo apt-get install csvkit
 
-# Curl and other basics
+# The set-up
 
 The first thing we need to do is create a folder for your course materials and read some data into a terminal. 
 
@@ -47,8 +50,22 @@ We want to create a new directory to store our data in.
 
 Type mkdir csvkit_class this will create a new file in your home directory
 
-Now we need to enter that folder
+Now we need to enter that folder. Type cd csvkit_class and press enter
 
-- 
+You can type pwd again to make sure you're in the right directory.
+
+# Readig in data
+
+Now we need to find some data and read it into the terminal. 
+
+We are going to use the command curl which grabs data from urls
+
+curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84e2/resource/e983b323-df6e-43f2-a78d-7af0a2dff997/download/nsnextract.xlsx
+
+To make sure that we have been succesful grabbing the data type - ls and it should list the file
+
+#Looking at our data
+
+
 
 
