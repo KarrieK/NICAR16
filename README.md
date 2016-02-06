@@ -54,7 +54,7 @@ Now we need to enter that folder. Type cd csvkit_class and press enter
 
 You can type pwd again to make sure you're in the right directory.
 
-# Readig in data
+# Reading in data
 
 Now we need to find some data and read it into the terminal. 
 
@@ -65,6 +65,12 @@ curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84
 To make sure that we have been succesful grabbing the data type - ls and it should list the file
 
 #Looking at our data
+
+The first thing we need to do is turn our excel file into a csv and change its name
+
+To do this we are going to use the command in2csv and then rename it
+
+$ in2csv nsnextract.xlsx > data.csv
 
 
 
