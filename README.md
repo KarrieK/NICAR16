@@ -1,8 +1,12 @@
 # Csvkit and other command line tools
 
-During this class we are going to look at how the python library csvkit can manipulate and analyse data
+We are going to look at how the python library csvkit can manipulate and analyse data from a bash shell
 
-We are also going to cover curl and xxxx
+Csvkit is flexible, easy to use and powerful. We should all buy Christopher Groskopf a drink at the bar! 
+
+We are also going some basic unix commands like pwd, cd, curl etc so you can learn how to navigate through a termainal.
+
+If you want a more comprehensive list of unix tools, I'll have one up on github after the class
 
 #Overview
 We are going to use the following commands:
