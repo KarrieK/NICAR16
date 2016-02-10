@@ -62,10 +62,10 @@ $mkdir csvkit_class
 This will create a new file in your home directory
 
 Now we need to navigate into the folder we just created.  
-$cd csvkit_class 
+$ cd csvkit_class 
 
 Check that you are in the correct folder
-$pwd 
+$ pwd 
 
 # Reading in data
 
