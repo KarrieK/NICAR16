@@ -55,13 +55,17 @@ To do that we are going to use a coupld of unix commands on the command line.
 
 Open up a terminal and type pwd - this tells you that you should be in your home directory
 
-We want to create a new directory to store our data in. 
+Next we need to create a new directory to store our data in.
 
-Type mkdir csvkit_class this will create a new file in your home directory
+$mkdir csvkit_class 
 
-Now we need to enter that folder. Type cd csvkit_class and press enter
+This will create a new file in your home directory
 
-You can type pwd again to make sure you're in the right directory.
+Now we need to navigate into the folder we just created.  
+$cd csvkit_class 
+
+Check that you are in the correct folder
+$pwd 
 
 # Reading in data
 
