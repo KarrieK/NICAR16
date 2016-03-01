@@ -27,22 +27,6 @@ We are going to use the following commands:
 #Environment
 Because we are limited on time and many of you are most likely running windows we are going to use python anywhere - a shell hosted in the browser.
 
-For those of you who would like to install and run csvkit on their own machines, you can install it easily for linux or OSX operating systems. 
-If you run windows, never fear, you can install virtual box and run a linux environemtnfrom there. 
-
-You need python 2.7 or 3.3 installed. 
-
-You can install csvkit using the following commands, depending on what package manager you're using:
-
-$ pip install csvkit
-
-or 
-
-$ conda install csv
-
-or 
-
-$ sudo apt-get install csvkit
 
 # Getting comfortable with python anywhere
 
