@@ -25,9 +25,12 @@ We are going to use the following commands:
 * csvgrep - regex command like a refined search function in our csv
 * csvsql - enables us to connect to a sql database 
 
-#Installation
-Ideally you will be running a virtualenv or virtualbox running a linux based operating system.
-If not, never fear csvkit should operate fine on a Mac OS. 
+#Environment
+Because we are limited on time and many of you are most likely running windows we are going to use python anywhere - a shell hosted in the browser.
+
+For those of you who would like to install and run csvkit on their own machines, you can install it easily for linux or OSX operating systems. 
+If you run windows, never fear, you can install virtual box and run a linux environemtnfrom there. 
+
 You need python 2.7 or 3.3 installed. 
 
 You can install csvkit using the following commands, depending on what package manager you're using:
@@ -42,7 +45,12 @@ or
 
 $ sudo apt-get install csvkit
 
-# The set-up
+# Getting comfortable with python anywhere
+
+Open a browser and create a new beginner account on https://www.pythonanywhere.com/pricing/
+
+Create a new account, it should take just a few moments. 
+
 
 The first thing we need to do is create a folder for your course materials and read some data into a terminal. 
 
