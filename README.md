@@ -15,7 +15,6 @@ We are going to use the following commands:
 * cd - change directory
 * mkdir - make directory
 * ls - list
-* curl - grabs data from a url
 * in2csv - converts a file into a csv
 * csvlook - gives us a preview of our data
 * csvcut - cutting too for manipulating csvs
@@ -51,25 +50,19 @@ Open a browser and create a new beginner account on https://www.pythonanywhere.c
 
 Create a new account, it should take just a few moments. 
 
+In another tab in your broswer go to this link http://catalog.data.gov/dataset/formal-enforcement-actions-fy-2004-fy-2010-1088e
 
-The first thing we need to do is create a folder for your course materials and read some data into a terminal. 
+Download the excel file and then upload it into pythonanywhere in the files tab. 
 
 To do that we are going to use a coupld of unix commands on the command line. 
 
 * pwd - print working directory
 * cd - change directory
-* mkdir - make directory
-* curl - grabs data from a url
+* ls - lists the contents of a folder
 
-Open up a terminal and type pwd - this tells you that you should be in your home directory
+We start running a bash shell and wait for it to initialise. 
+Then type _pwd_ to check that you're in your own home directory
 
-Next we need to create a new directory to store our data in.
-
-$mkdir csvkit_class 
-
-This will create a new file in your home directory
-
-Now we need to navigate into the folder we just created.  
 $ cd csvkit_class 
 
 Check that you are in the correct folder
