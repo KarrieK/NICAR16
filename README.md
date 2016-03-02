@@ -8,7 +8,7 @@ We are going to convert an excel file to a csv, then analyse it and output our r
 
 If you want a more comprehensive list of unix tools, I'll have one up on github after the class
 
-#Overview
+##Overview
 We are going to use the following commands:
 
 * pwd - print working directory 
@@ -24,11 +24,8 @@ We are going to use the following commands:
 * csvgrep - regex command like a refined search function in our csv
 * csvsql - enables us to connect to a sql database 
 
-#Environment
+##Environment
 Because we are limited on time and many of you are most likely running windows we are going to use python anywhere - a shell hosted in the browser.
-
-
-# Getting comfortable with python anywhere
 
 Open a browser and create a new beginner account on https://www.pythonanywhere.com/pricing/
 
@@ -52,13 +49,14 @@ $ cd csvkit_class
 Check that you are in the correct folder
 $ pwd 
 
-# Reading in data
+## Installing csvkit
 
-Now we need to find some data and read it into the terminal. 
+Now we need to install csvkit in our cash shell. 
 
-We are going to use the command curl which grabs data from urls
+To do this we are going to use the pip package manager for python version 2.7
 
-$ curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84e2/resource/e983b323-df6e-43f2-a78d-7af0a2dff997/download/nsnextract.xlsx
+$ pip2.7 install --user csvkit
+
 
 To make sure that we have been succesful grabbing the data type - ls and it should list the file
 
