@@ -24,7 +24,7 @@ $ sudo apt-get install csvkit
 
 If you have any problms check out csvkit's documentation at https://csvkit.readthedocs.org/en/0.9.1/install.html
 
-#Unix commands and reading in data
+##Navigating and reading in data
 
 So unlike python anywhere you need to be able to make folders on the command line
 
