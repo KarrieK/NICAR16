@@ -6,7 +6,7 @@ For those of you who would like to install and run csvkit on their own machines,
 
 If you run windows, never fear, you can install virtual box and run a linux enviroment from there. 
 
-#Getting going
+##Getting going
 
 You need python 2.7 or 3.3 installed. 
 
@@ -28,17 +28,21 @@ If you have any problms check out csvkit's documentation at https://csvkit.readt
 
 So unlike python anywhere you need to be able to make folders on the command line
 
-Open a terminal and type _pwd_ to make sure you're in your home directory
+Open a terminal and type pwd to make sure you're in your home directory
 
-Now we need to make a new folder to contain our work - type _mkdir csvkit_
+Now we need to make a new folder to contain our work - type:
+$ mkdir csvkit
+
 The next move is to navigate into the folder, to do this we use _cd_ which lets us change directory
 
-$ _cd csvkit_
+$ cd csvkit
 
-To check the folder is empty we type _ls_ this checks the contents of a folder. 
+To check the folder is empty we type ls this checks the contents of a folder. 
 
-If you want to grab your data from here you can use _Curl_
+If you want to grab your data from here you can use Curl
 
-$ _curl -L -0 *your url*_
+$ We are going to use the command curl which grabs data from urls
+
+$ curl -L -O https://inventory.data.gov/dataset/67567804-073d-40ad-a710-2b0bed8b84e2/resource/e983b323-df6e-43f2-a78d-7af0a2dff997/download/nsnextract.xlsx
 
 This will load your data into the terminal. From here you can follow the rest of the instructions from the class.
