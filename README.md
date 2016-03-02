@@ -42,12 +42,14 @@ To do that we are going to use a coupld of unix commands on the command line.
 * ls - lists the contents of a folder
 
 We start running a bash shell and wait for it to initialise. 
-Then type _pwd_ to check that you're in your own home directory
 
-$ cd csvkit_class 
+Then type pwd_to check that you're in your own home directory
 
-Check that you are in the correct folder
-$ pwd 
+Now we need to check that our data was correctly uploaded into our virtual machine to do this we use the command below:
+
+$ ls 
+
+You should see your data in here - of not shout and someone will give you a hand!
 
 ## Installing csvkit
 
@@ -56,9 +58,6 @@ Now we need to install csvkit in our cash shell.
 To do this we are going to use the pip package manager for python version 2.7
 
 $ pip2.7 install --user csvkit
-
-
-To make sure that we have been succesful grabbing the data type - ls and it should list the file
 
 #Looking at our data
 
