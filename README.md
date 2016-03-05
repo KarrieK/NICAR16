@@ -31,9 +31,14 @@ Open a browser and create a new beginner account on https://www.pythonanywhere.c
 
 Create a new account, it should take just a few moments. 
 
-In another tab in your broswer go to this link http://catalog.data.gov/dataset/formal-enforcement-actions-fy-2004-fy-2010-1088e
+We are going to use some data on IRS 990 exempted firms - it's only a snapshot of the dataset to practice with. 
+It is in the data folder of this github repo. 
 
-Download the excel file and then upload it into pythonanywhere in the files tab. 
+Download it and move to the files tab of Pythonanywhere. 
+
+Upload our data using the uploader button and go back to the consoles tab.
+
+Now we need to get ourselves a terminal. 
 
 To do that we are going to use a coupld of unix commands on the command line. 
 
@@ -61,13 +66,13 @@ $ pip2.7 install --user csvkit
 
 #Looking at our data
 
-The first thing we need to do is turn our excel file into a csv and change its name
+Our data set is from the ire data library - The first thing we need to do get our data into the terminal in the right format. 
 
-To do this we are going to use the command in2csv and then rename it
+- If you are dealling with an excel file you can covert your data using the command 
 
-$ in2csv nsnextract.xlsx > data.csv
+$ in2csv sampledata.xlsx > data.csv
 
-Now we have some data in a csv format it's time to look at it and figure out what we've got. 
+But as our data set is already a csv we need to navigate into the right folder so we can look at our data and figure out what we've got. 
 
 Csvlook will dump the entire csv into your terminal 
 
@@ -81,8 +86,10 @@ $ csvcut -n data. csv
 
 The -n means that we should see the names of the columns 
 
-Now we have 6 columns - this is a good time to get our data dictionary out and figute out what type of data we're looking at. 
+Now we have 6 columns - this is a good time to get our data dictionary out and figure out what type of data we're looking at. 
+##Descriptive stats
 
+Running csvclean over our data will clean it of any trailing spaces 
 
 
 
