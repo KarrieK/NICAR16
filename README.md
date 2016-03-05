@@ -24,7 +24,7 @@ We are going to use the following commands:
 * csvgrep - regex command like a refined search function in our csv
 * csvsql - enables us to connect to a sql database 
 
-##Environment
+##Set up and grabbing our data
 Because we are limited on time and many of you are most likely running windows we are going to use python anywhere - a shell hosted in the browser.
 
 Open a browser and create a new beginner account on https://www.pythonanywhere.com/pricing/
@@ -38,17 +38,26 @@ Download it and move to the files tab of Pythonanywhere.
 
 Upload our data using the uploader button and go back to the consoles tab.
 
-Now we need to get ourselves a terminal. 
+Now we need to get ourselves a terminal. Start a new bash console and wait for it to initialis. 
 
-To do that we are going to use a coupld of unix commands on the command line. 
+Once it's up and running then it's time to get csvkit
+
+Now we need to install csvkit in our bash shell. 
+
+To do this we are going to use the pip package manager for python version 2.7
+
+$ pip2.7 install --user csvkit
+
+##Looking at our data 
+Now we need to navigate into the correct folder in the terminal in order to perform analysis on our data
+
+To do that we are going to use a couple of unix commands on the command line. 
 
 * pwd - print working directory
 * cd - change directory
 * ls - lists the contents of a folder
-
-We start running a bash shell and wait for it to initialise. 
-
-Then type pwd_to check that you're in your own home directory
+* 
+Type pwd_to check that you're in your own home directory
 
 Now we need to check that our data was correctly uploaded into our virtual machine to do this we use the command below:
 
@@ -56,15 +65,11 @@ $ ls
 
 You should see your data in here - of not shout and someone will give you a hand!
 
-## Installing csvkit
-
-Now we need to install csvkit in our cash shell. 
-
-To do this we are going to use the pip package manager for python version 2.7
-
-$ pip2.7 install --user csvkit
-
 #Looking at our data
+
+* in2csv
+* csvlook
+* csvcut
 
 Our data set is from the ire data library - The first thing we need to do get our data into the terminal in the right format. 
 
@@ -86,14 +91,30 @@ $ csvcut -n data. csv
 
 The -n means that we should see the names of the columns 
 
-Now we have 6 columns - this is a good time to get our data dictionary out and figure out what type of data we're looking at. 
-##Descriptive stats
+This is about the time that we grab a data dictionary to figure out what each column means
 
-Running csvclean over our data will clean it of any trailing spaces 
+##Data formatting
 
+* csvclean
+* csvstat
 
+Let's clean the data quickly to make sure it's formatted correctly. 
 
+$ csvclean IRSdata.csv
 
+Now we get look at some basic stats to look for trends in our data. 
+
+$ csvstat IRSdata.csv
+
+This is another handy way of checking how clean your data is - look for values that are out of place like if there was more than 12 unique values for Month. 
+
+Time to start wrangling. 
+
+##Data Wrangling
+
+*csvgrep - Regular expression allowing us to filter our data
+*csvsort - sorts the data
+*csvsql - Connects our data to a sql database to allow us to query it
 
 
 
