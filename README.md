@@ -56,7 +56,7 @@ To do that we are going to use a couple of unix commands on the command line.
 * pwd - print working directory
 * cd - change directory
 * ls - lists the contents of a folder
-* 
+
 Type pwd_to check that you're in your own home directory
 
 Now we need to check that our data was correctly uploaded into our virtual machine to do this we use the command below:
@@ -112,9 +112,9 @@ Time to start wrangling.
 
 ##Data Wrangling
 
-*csvgrep - Regular expression allowing us to filter our data
-*csvsort - sorts the data
-*csvsql - Connects our data to a sql database to allow us to query it
+* csvgrep - Regular expression allowing us to filter our data
+* csvsort - sorts the data
+* csvsql - Connects our data to a sql database to allow us to query it
 
 
 
