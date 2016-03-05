@@ -48,7 +48,7 @@ To do this we are going to use the pip package manager for python version 2.7
 
 $ pip2.7 install --user csvkit
 
-##Looking at our data 
+##Unix commands for navigating
 Now we need to navigate into the correct folder in the terminal in order to perform analysis on our data
 
 To do that we are going to use a couple of unix commands on the command line. 
@@ -112,9 +112,18 @@ Time to start wrangling.
 
 ##Data Wrangling
 
+* csvcut - slices away segements of our data
 * csvgrep - Regular expression allowing us to filter our data
 * csvsort - sorts the data
 * csvsql - Connects our data to a sql database to allow us to query it
+
+Now we start combining our functions to build queries to explore our data.
+
+We use | or a pipe to combine or stack the commands together. | are extremely powrful and a great tool. 
+
+Let's choose some columns to look at. 
+
+$ csvcut -c 
 
 
 
