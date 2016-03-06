@@ -25,13 +25,14 @@ We are going to use the following commands:
 * csvsql - enables us to connect to a sql database 
 
 ##Set up and grabbing our data
-Because we are limited on time and many of you are most likely running windows we are going to use python anywhere - a shell hosted in the browser.
+We are going to use python anywhere - it's a start-up that hosts bash and python shells in the browser. It's handy and quick to set up and it can be run easily on windows machines. If anyone would like to use this on their own laptop I'll have another readme in the github repo explaining how to run csvkit in a terminal on a linux or OSX operating system. 
 
 Open a browser and create a new beginner account on https://www.pythonanywhere.com/pricing/
 
 Create a new account, it should take just a few moments. 
 
 We are going to use some data on IRS 990 exempted firms - it's only a snapshot of the dataset to practice with. 
+
 It is in the data folder of this github repo. 
 
 Download it and move to the files tab of Pythonanywhere. 
@@ -112,6 +113,7 @@ Time to start wrangling.
 
 ##Data Wrangling
 
+* head - limits to the top 10 rows
 * csvcut - slices away segements of our data
 * csvgrep - Regular expression allowing us to filter our data
 * csvsort - sorts the data
@@ -119,7 +121,7 @@ Time to start wrangling.
 
 Now we start combining our functions to build queries to explore our data.
 
-We use | or a pipe to combine or stack the commands together. | are extremely powrful and a great tool. 
+We use | or a pipe to combine or stack the commands together to build more powerful queries. 
 
 Let's have a look at which states have IRS 990 organisations. 
 
