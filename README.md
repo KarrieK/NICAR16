@@ -135,9 +135,11 @@ Let's add in another column and look at Income Amount
 
 csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
 
+Obviously there are more organisation in Michigan than other states. Let's use csvgrep to take a closer look at what's going on in Michegan
 
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvstat | csvlook
 
-
+Looking closer at ME we see that the sum total of 
 
 
 
