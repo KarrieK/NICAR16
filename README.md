@@ -139,7 +139,18 @@ Obviously there are more organisation in Michigan than other states. Let's use c
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvstat | csvlook
 
-Looking closer at ME we see that the sum total of 
+What is the total income amount for all 990 organisations in ME? $10,043,698,930
+How many organisations have 0 income?
+How many rows?
+What are the 5 most frequent values?
+
+## Digging deeper
+
+Let's see if we can find out the names of the organisations with the highest income
+
+
+
+
 
 
 
