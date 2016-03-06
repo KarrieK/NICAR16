@@ -125,15 +125,19 @@ Let's have a look at which states have IRS 990 organisations.
 
 $ csvcut -c STATE IRSdata.csv | csvlook
 
+We want to see what sort of data we have - so let's use head and have a look at the first 10 rows
+
+$ csvcut -n data. csv | csvlook | head
+
 Unfortunately that doesn't tell us much so let's look and see if we can get some summary stats on the states. 
 
-$ csvcut -c STATE IRSdata.csv | csvstat 
+$ csvcut -c STATE IRSdata.csv | csvstat | csvlook
 
 Which state has the most amount of organisations? But what does that mean?
 
 Let's add in another column and look at Income Amount
 
-csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
 
 Obviously there are more organisation in Michigan than other states. Let's use csvgrep to take a closer look at what's going on in Michegan
 
@@ -148,7 +152,7 @@ What are the 5 most frequent values?
 
 Let's see if we can find out the names of the organisations with the highest income
 
-
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
 
 
 
