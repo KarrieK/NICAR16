@@ -121,9 +121,23 @@ Now we start combining our functions to build queries to explore our data.
 
 We use | or a pipe to combine or stack the commands together. | are extremely powrful and a great tool. 
 
-Let's choose some columns to look at. 
+Let's have a look at which states have IRS 990 organisations. 
 
-$ csvcut -c 
+$ csvcut -c STATE IRSdata.csv | csvlook
+
+Unfortunately that doesn't tell us much so let's look and see if we can get some summary stats on the states. 
+
+$ csvcut -c STATE IRSdata.csv | csvstat 
+
+Which state has the most amount of organisations? But what does that mean?
+
+Let's add in another column and look at Income Amount
+
+csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
+
+
+
+
 
 
 
