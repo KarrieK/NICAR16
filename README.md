@@ -23,6 +23,7 @@ We are going to use the following commands:
 * csvstat - gives us descriptive stats for the content of our csv
 * csvsort - sorts the contents of a csv file
 * csvgrep - regex command like a refined search function in our csv
+* head - limits data to the top ten rows
 
 ##Set up and grabbing our data
 We are going to use python anywhere - it's a start-up that hosts bash and python shells in the browser. It's handy and quick to set up and it can be run easily on windows machines. If anyone would like to use this on their own laptop I'll have another readme in the github repo explaining how to run csvkit in a terminal on a linux or OSX operating system. 
