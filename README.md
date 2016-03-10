@@ -76,7 +76,7 @@ You should see your data in here - of not shout and someone will give you a hand
 
 Our data set is from the IRE data library - The first thing we need to do get our data into the terminal in the right format. 
 
-- If you are dealling with an excel file you can covert your data using the command 
+If you are dealling with an excel file you can covert your data using the command 
 
 $ in2csv sampledata.xlsx > data.csv
 
@@ -158,7 +158,11 @@ What are the 5 most frequent values?
 
 ## Digging deeper
 
-Let's see if we can find out the names of the organisations with the highest income
+Let's build a query to figure out the names of the organisations with the highest incomes.
+
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME | csvsort -c INCOME_AMT | csvlook | head 
+
+Csvkit has sorted the data by INCOME-AMT from lowest to highest - this isn't very convienent so we are going to use the -r flag (reverse) to reverese the sorting order
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME | csvsort -c INCOME_AMT -r | csvlook | head 
 
@@ -172,7 +176,7 @@ Who is on top? If you are a local paper then maybe there are some surprising res
 
 Today we only touched briefly on csvkit - whil we looked at it simply in a bash shell you can combine it with python or SQL to build powerful queries and keep interrogating your data. 
 
-Here ar some other custom commands we didn't touch on:
+Here are some other custom commands we didn't touch on:
 
 * csvsql - Generates SQL statements for a csv or execute those statements directly on a database. In the latter case supports both creating tables and inserting data
 * csvpy - Loads a CSV file into a csvkit.CSVKitReader object and then drops into a Python shell so the user can inspect the data however they see fit
