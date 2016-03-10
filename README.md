@@ -147,7 +147,7 @@ Let's take a look to see if there are multiple organisations of the same name in
 
 $ csvcut -c NAME IRSdata.csv | csvstat | csvlook
 
-Let's combine STATE and INCOME_AMT to see what 
+Let's combine STATE and INCOME_AMT to see what we get
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
 
@@ -163,7 +163,7 @@ What are the 5 most frequent values?
 
 ## Digging deeper
 
-Let's build a query to figure out the names of the organisations with the highest incomes.
+Let's build a query to figure out the names of the organisations with the highest incomes
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME | csvsort -c INCOME_AMT | csvlook | head 
 
@@ -179,7 +179,8 @@ Who is on top? If you are a local paper then maybe there are some surprising res
 
 ##Finishing up
 
-Today we only touched briefly on csvkit - whil we looked at it simply in a bash shell you can combine it with python or SQL to build powerful queries and keep interrogating your data. 
+Today we only touched briefly on csvkit - while
+used csvkit briefly in a bash shell you can combine it with python or SQL to build powerful queries and keep interrogating your data. 
 
 Here are some other custom commands we didn't touch on:
 
