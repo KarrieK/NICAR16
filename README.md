@@ -2,11 +2,11 @@
 
 Csvkit is the king of csv wrangling libraries. It converts, greps, sorts and outputs large sets of data so you don't need to use Excel or SQL.It provides a user with a nice intro to the awesome power of the command line. 
 
-Csvkit is flexible, easy to use and powerful. It is not limited to 1 million rows like excel yet is time efficient so you aren't waiting for queries like SQL. It's a great stepping stone to the command line and programming languages. 
+Csvkit is flexible, easy to use and powerful. It is not limited to a million rows of data like excel, yet is time efficient so you aren't waiting for queries like SQL. It's a great stepping stone to the command line and programming languages. 
 
 We should all buy Christopher Groskopf a drink at the bar! 
 
-We are going to convert an excel file to a csv, then analyse it and output our results. We will also cover some of the basic unix commands like pwd, cd, curl etc so you can learn how to navigate through a termainal.
+We are going to learn how to convert an excel file to a csv then analyse it and output our results. We will also cover some of the basic unix commands like pwd, cd, etc so you can learn how to navigate through a termainal.
 
 If you want a more comprehensive list of unix tools, I'll have one up on github after the class
 
@@ -15,8 +15,7 @@ We are going to use the following commands:
 
 * pwd - print working directory 
 * cd - change directory
-* mkdir - make directory
-* ls - list
+* ls - lists contents of a directory
 * in2csv - converts a file into a csv
 * csvlook - gives us a preview of our data
 * csvcut - cutting too for manipulating csvs
@@ -34,11 +33,13 @@ Create a new account, it should take just a few moments.
 
 We are going to use some data on IRS 990 exempted firms - it's only a snapshot of the dataset to practice with. 
 
-It is in the data folder of this github repo. 
+It will be in a folder on your computers in the following location
 
-Download it and move to the files tab of Pythonanywhere. 
+Desktop > 2016 CAR Conference > Command line tools for reporters (PC) > Data > IRSdata.csv
 
-Upload our data using the uploader button and go back to the consoles tab.
+Now  we need to get it into Pythonanywhere. 
+
+Navigate to the files tab of Pythonanywhere upload the data using the uploader button and go back to the consoles tab.
 
 Now we need to get ourselves a terminal. Start a new bash console and wait for it to initialis. 
 
@@ -59,7 +60,7 @@ To do that we are going to use a couple of unix commands on the command line.
 * cd - change directory
 * ls - lists the contents of a folder
 
-Type pwd_to check that you're in your own home directory
+Type pwd to check that you're in your own home directory
 
 Now we need to check that our data was correctly uploaded into our virtual machine to do this we use the command below:
 
@@ -73,7 +74,7 @@ You should see your data in here - of not shout and someone will give you a hand
 * csvlook
 * csvcut
 
-Our data set is from the ire data library - The first thing we need to do get our data into the terminal in the right format. 
+Our data set is from the IRE data library - The first thing we need to do get our data into the terminal in the right format. 
 
 - If you are dealling with an excel file you can covert your data using the command 
 
@@ -129,7 +130,7 @@ $ csvcut -c STATE IRSdata.csv | csvlook
 
 We want to see what sort of data we have - so let's use head and have a look at the first 10 rows
 
-$ csvcut -n data. csv | csvlook | head
+$ csvcut -n IRSdata.csv | csvlook | head
 
 Unfortunately that doesn't tell us much so let's look and see if we can get some summary stats on the states. 
 
@@ -137,16 +138,21 @@ $ csvcut -c STATE IRSdata.csv | csvstat | csvlook
 
 Which state has the most amount of organisations? But what does that mean?
 
-Let's add in another column and look at Income Amount
+Let's take a look to see if there are multiple organisations of the same name in the data set
+
+$ csvcut -c NAME IRSdata.csv | csvstat | csvlook
+
+Let's combine STATE and INCOME_AMT to see what 
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
 
 Obviously there are more organisation in Maine than other states. Let's use csvgrep to take a closer look at what's going on in Maine
 
-$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvstat | csvlook
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME | cvstat | csvlook
 
 What is the total income amount for all 990 organisations in ME? $10,043,698,930
 How many organisations have 0 income?
+What is the maximum income?
 How many rows?
 What are the 5 most frequent values?
 
@@ -154,11 +160,11 @@ What are the 5 most frequent values?
 
 Let's see if we can find out the names of the organisations with the highest income
 
-$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME | csvsort -c INCOME_AMT -r | csvlook | head 
 
-Now let's take a look at the names of those organisations.
+Now see if we can figure out which organisation in Maine has an income amount of over $2 billion
 
-$ csvcut -c STATE,INCOME_AMT, NAME IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
+$ csvcut -c STATE,INCOME_AMT,NAME IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
 
 Who is on top? If you are a local paper then maybe there are some surprising results here
 
