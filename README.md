@@ -196,3 +196,9 @@ If you want to dig deep and get to know csvkit better then check out the great d
 * https://csvkit.readthedocs.org/en/0.9.1/tutorial.html
 * https://source.opennews.org/en-US/articles/eleven-awesome-things-you-can-do-csvkit/
 
+
+##Contact me
+
+Email: karrie.anne.kehoe@gmail.com
+Twitter: @karriekehoe
+
