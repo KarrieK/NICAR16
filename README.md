@@ -141,7 +141,7 @@ Let's add in another column and look at Income Amount
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvlook
 
-Obviously there are more organisation in Michigan than other states. Let's use csvgrep to take a closer look at what's going on in Michegan
+Obviously there are more organisation in Maine than other states. Let's use csvgrep to take a closer look at what's going on in Maine
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvstat | csvlook
 
@@ -156,7 +156,9 @@ Let's see if we can find out the names of the organisations with the highest inc
 
 $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
 
+Now let's take a look at the names of those organisations.
 
+$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
 
 
 
