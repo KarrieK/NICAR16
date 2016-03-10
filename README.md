@@ -50,7 +50,7 @@ Now we need to get ourselves a terminal. Start a new bash console and wait for i
 
 Once it's up and running then it's time to get csvkit
 
-Now we need to install csvkit in our bash shell. 
+Now we need to install csvkit in our bash shell. A bash shell is a command-line interpreter or shell which allows users to direct the operation of a computer by entering commands as text instead of with a mouse. 
 
 To do this we are going to use the pip package manager for python version 2.7
 
