@@ -2,7 +2,9 @@
 
 Csvkit is the king of csv wrangling libraries. It converts, greps, sorts and outputs large sets of data so you don't need to use Excel or SQL.It provides a user with a nice intro to the awesome power of the command line. 
 
-Csvkit is flexible, easy to use and powerful. We should all buy Christopher Groskopf a drink at the bar! 
+Csvkit is flexible, easy to use and powerful. It is not limited to 1 million rows like excel yet is time efficient so you aren't waiting for queries like SQL. It's a great stepping stone to the command line and programming languages. 
+
+We should all buy Christopher Groskopf a drink at the bar! 
 
 We are going to convert an excel file to a csv, then analyse it and output our results. We will also cover some of the basic unix commands like pwd, cd, curl etc so you can learn how to navigate through a termainal.
 
@@ -22,7 +24,6 @@ We are going to use the following commands:
 * csvstat - gives us descriptive stats for the content of our csv
 * csvsort - sorts the contents of a csv file
 * csvgrep - regex command like a refined search function in our csv
-* csvsql - enables us to connect to a sql database 
 
 ##Set up and grabbing our data
 We are going to use python anywhere - it's a start-up that hosts bash and python shells in the browser. It's handy and quick to set up and it can be run easily on windows machines. If anyone would like to use this on their own laptop I'll have another readme in the github repo explaining how to run csvkit in a terminal on a linux or OSX operating system. 
@@ -117,7 +118,6 @@ Time to start wrangling.
 * csvcut - slices away segements of our data
 * csvgrep - Regular expression allowing us to filter our data
 * csvsort - sorts the data
-* csvsql - Connects our data to a sql database to allow us to query it
 
 Now we start combining our functions to build queries to explore our data.
 
@@ -158,7 +158,25 @@ $ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c IN
 
 Now let's take a look at the names of those organisations.
 
-$ csvcut -c STATE,INCOME_AMT IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
+$ csvcut -c STATE,INCOME_AMT, NAME IRSdata.csv | csvgrep -c STATE -m ME |csvsort -c INCOME_AMT -r | csvlook | head 
 
+Who is on top? If you are a local paper then maybe there are some surprising results here
 
+##Finishing up
+
+Today we only touched briefly on csvkit - whil we looked at it simply in a bash shell you can combine it with python or SQL to build powerful queries and keep interrogating your data. 
+
+Here ar some other custom commands we didn't touch on:
+
+* csvsql - Generates SQL statements for a csv or execute those statements directly on a database. In the latter case supports both creating tables and inserting data
+* csvpy - Loads a CSV file into a csvkit.CSVKitReader object and then drops into a Python shell so the user can inspect the data however they see fit
+* csvformat - Converts a csv to a custom output format
+* csvjson - Converts a CSV file into JSON or GeoJSON 
+
+##Resources
+
+If you want to dig deep and get to know csvkit better then check out the great documentation and tutorial on readthedocs. 
+
+* https://csvkit.readthedocs.org/en/0.9.1/tutorial.html
+* https://source.opennews.org/en-US/articles/eleven-awesome-things-you-can-do-csvkit/
 
