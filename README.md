@@ -1,5 +1,9 @@
 # Csvkit and other command line tools
 
+Wifi:CAR2016
+
+website:www.pythonanywhere.com
+
 Csvkit is the king of csv wrangling libraries. It converts, greps, sorts and outputs large sets of data so you don't need to use Excel or SQL.It provides a user with a nice intro to the awesome power of the command line. 
 
 Csvkit is flexible, easy to use and powerful. It is not limited to a million rows of data like excel, yet is time efficient so you aren't waiting for queries like SQL. It's a great stepping stone to the command line and programming languages. 
